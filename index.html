@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Explore the work of Sally Student, an up and coming web developer.">
+    <title>Sally Student Resume</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    
+    <div id='root-container'></div>
+    
+    <script
+    src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script
+    src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    </script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js">
+    </script>
+    <script type="text/babel">
+
+        function Header(props) {
+            return (
+                <header className={props.className}>
+                    {props.children}
+                    <h2>Full Stack Web Developer</h2>
+                    <h3>Coder, Artist, Bad Ass Scrapbooker</h3>
+                </header>
+            );
+        }
+
+        function Contact(props){
+            return(
+                <section className={props.className}>
+                    <header>
+                        <h2>CONTACT</h2>
+                    </header>
+                    <hr/>
+                    <address>
+                        <p>Name: Sally Student</p>
+                        <p>Email: <a href="mailto:abbi@soulstice.com">abbi@soulstice.com</a></p>
+                        <p>Phone number: <a href="+001-215-867-5309">215-867-5309</a></p>
+                    </address>
+                    <img className="resumePic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA_VrX8FVsVDLXheug-TiPQtyxc2HAK88me1FPcye5zd2rDFze" alt="Sally Student looking classy"/>
+                </section>
+            );
+        }
+
+        function Education(props){
+            return (
+                <section className={props.className}>
+                    <header>
+                        <h2>EDUCATION</h2>
+                    </header>
+                    <hr/>
+                    <p className="years">2005-2010</p>
+                    <section className="college">
+                        <h3>BA in Computer Science</h3>
+                        <h4>Rutgers University</h4>
+                        <h5>New Brunswick, New Jersey</h5>
+                        <h6>Major in Computer Science, minor in psychology</h6>
+                    </section>
+                    <p className="years">20010-2013</p>
+                    <section className="college">
+                        <h3>Masters in Data Analytics</h3>
+                        <h4>Penn University</h4>
+                        <h5>Philadelphia, Pennsylvania</h5>
+                    </section>
+                </section>
+            );
+        }
+
+        function Experience(props){
+            return (
+                <section className={props.className}>
+                    <header>
+                        <h2>EXPERIENCE</h2>
+                    </header>
+                    <hr/>
+                    <p className="years">2013-2016</p>
+                    <section className="college">
+                        <h3>Houzz</h3>
+                        <h4>Junior Developer</h4>
+                        <h5>Tel Aviv, Israel</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                    </section>
+                    <p className="years">2013-2016</p>
+                    <section className="college">
+                        <h3>Nectar Sleep</h3>
+                        <h4>Full Stack Developer</h4>
+                        <h5>Raanana, Israel</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                    </section>
+                </section>
+            );
+        }
+
+        ReactDOM.render(
+            <div>
+                <Header className='title'>
+                        <h1>SALLY STUDENT</h1>
+                </Header>
+                <main>
+                    <Contact className='contactSection' />
+                    <Education className='edSection' />
+                    <Experience className='expSection' />
+                </main>
+            </div>,
+            document.querySelector('#root-container')
+        );
+    </script>
+  </body>
+</html>
